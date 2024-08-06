@@ -1,0 +1,38 @@
+<mvc:View controllerName="com.sap.Databinding1.controller.App"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:l="sap.ui.layout">
+    <Shell id= "Shell">
+        <App id = "app">
+             <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <Panel id="_IDGenPanel1" headerText="{i18n>myinfo}" class="sapUiResponsiveMargin" width="auto">
+                            <content>
+                                 <l:VerticalLayout id="_IDGenVerticalLayout1">
+                                    <Label id="_IDGenLabel1" text="{i18n>firstName}" class="sapUiTinyMarginTop"></Label>
+                                    <Text id="_IDGenText1" text="{/firstName}"></Text>
+                                    <Label id="_IDGenLabel2" text="{i18n>lastName}" class="sapUiTinyMarginTop"></Label>
+                                    <Text id="_IDGenText2" text="{/lastName}"></Text>
+                                    <Label id="_IDGenLabel3" text="{i18n>address}" class="sapUiTinyMarginTop"></Label>
+                                    <Text id="_IDGenText3" text="{/address/street}"/>
+                                    <Text id="_IDGenText4" text="{/address/city}"/>
+                                    <Text id="_IDGenText5" text="{/address/zip}"/>
+                                    <Text id="_IDGenText6" text="{/address/country}"/>
+                                    <Image id="_IDGenImage1" class="sapUiSmallMargin" width="500px" 
+                                        src="{parts: ['/address/street','/address/zip','/address/city','/address/country'], formatter: ',formatMaprl'}"/> 
+                                    <Label id="_IDGenLabel4" text="{i18n>hobbies}" class="sapUiSmallMarginTop" ></Label>
+                                    <List id="_IDGenList1" items="{path: '/hobbies', factory: '.factory.hobbyFactory'}">
+                                    <dependents>
+                                    <core:Fragment id="_IDGenFragment1" fragmentName="com.sap.Databinding1.fragments.Amature" type="XML"/>
+                                    <core:Fragment id="_IDGenFragment2" fragmentName="com.sap.Databinding1.fragments.Professional" type="XMl"/>
+                                    </dependents>
+                                    </List>
+                                </l:VerticalLayout>
+                            </content>
+                        </Panel>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

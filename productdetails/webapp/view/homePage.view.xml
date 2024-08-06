@@ -1,0 +1,91 @@
+<mvc:View controllerName="productdetails.controller.homePage"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+    <Page id="page" title="Rainbow School">
+    <Text id="_IDGenText1" text="Student Admissions"></Text>
+    <ToolbarSpacer></ToolbarSpacer>
+
+    <l:VerticalLayout id="isLYOUT" class="sapUiContentPadding" width="100%">
+	
+		<Label text="Student Name" labelFor="input-a" />
+		<Input id="input-a" required="true" />
+
+		<Label text="Class" labelFor="input-b"/>
+		<Input id="input-b" required="true" />
+
+		<Label text="Father's Name" labelFor="input-c" />
+		<Input id="input-c" />
+
+		<Label text="Date of Birth" labelFor="input-d" />
+		<Input id="input-d" />
+	</l:VerticalLayout>
+
+
+    <Button id="butt" text="Submit" press="onSubmit"></Button>
+	
+
+<Table id="idstudentTable"
+		inset="false"
+		items="{
+			path: '/',
+			sorter: {
+				path: 'Name'
+			}
+		}">
+		<headerToolbar>
+			<OverflowToolbar>
+				<content>
+					<Title text="Students" level="H2"/>
+					<ToolbarSpacer />
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+		<infoToolbar>
+			<OverflowToolbar>
+				<Label text="Students admitted in our school"/>
+			</OverflowToolbar>
+		</infoToolbar>
+		<columns>
+			<Column
+				width="12em">
+				<Text text="Student Name" />
+			</Column>
+
+			<Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="Class" />
+			</Column>
+
+			<Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="Father's Name" />
+			</Column>
+			<Column
+				minScreenWidth="Desktop"
+				demandPopin="true">
+				<Text text="Date of Birth" />
+			</Column>
+		</columns>
+        
+		<items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<ObjectIdentifier
+						text="{studentName}"/>
+					<Text
+						text="{class}" />
+					<Text
+						text="{fathersName}" />
+					<Text
+						text="{dateofbirth}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+
+        
+    </Page>
+</mvc:View>

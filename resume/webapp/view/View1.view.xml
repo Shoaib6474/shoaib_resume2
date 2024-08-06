@@ -1,0 +1,63 @@
+<mvc:View
+    id="_IDGenView1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:layout="sap.ui.layout"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:tnt="sap.tnt"
+    xmlns="sap.m"
+    controllerName="resume.controller.View1"
+    displayBlock="true">
+    
+    <App id="_IDGenApp1">
+        <Page id="_IDGenPage1" title="{i18n>title}">
+
+            <layout:BlockLayout id="_IDGenBlockLayout1" background="Default" >
+                <layout:BlockLayoutRow id="_IDGenBlockLayoutRow1">
+                    <layout:BlockLayoutCell id="_IDGenBlockLayoutCell1"  >
+                        <Title id="_IDGenTitle1" level="H2" titleStyle="H2" text="M.K.Shoaibuddin Faiz" width="100%" textAlign="Center"/>
+                    </layout:BlockLayoutCell>
+                </layout:BlockLayoutRow>
+
+                 <layout:BlockLayoutRow id="_IDGenBlockLayoutRow2" >
+                    <layout:BlockLayoutCell id="_IDGenBlockLayoutCell2" >
+                    <Link id="_IDGenLink1" text="{i18n>linkdin}" width="100%" textAlign="Center" ></Link>
+                    </layout:BlockLayoutCell>
+                </layout:BlockLayoutRow>
+
+                <layout:BlockLayoutRow id="_IDGenBlockLayoutRow3" >
+                    <layout:BlockLayoutCell id="_IDGenBlockLayoutCell3" >
+                        <Link id="_IDGenLink2" text="{i18n>email}" width="100%" textAlign="Center" ></Link>
+                    </layout:BlockLayoutCell>
+                </layout:BlockLayoutRow>
+
+
+                <layout:BlockLayoutRow id="_IDGenBlockLayoutRow4" >
+                    <layout:BlockLayoutCell id="_IDGenBlockLayoutCell4" >
+                        <Title id="_IDGenTitle3" text="Summary"  ></Title>
+                        <Text id="_IDGenText1" text="{i18n>desp}" ></Text>
+                    </layout:BlockLayoutCell>
+                </layout:BlockLayoutRow>
+
+                <layout:BlockLayoutRow id="_IDGenBlockLayoutRow5" >
+                <layout:BlockLayoutCell id="_IDGenBlockLayoutCell5" >
+                    <Title id="_IDGenTitle4" text="Skills"  ></Title>
+                    <FlexBox id="_IDGenFlexBox1" items="{/skills}" justifyContent="Center" wrap="Wrap" class="sapUiSmallMarginBottom">
+							<tnt:InfoLabel id="_IDGenInfoLabel1" text="{name}" class="sapUiSmallMarginTop sapUiSmallMarginEnd"/>
+						</FlexBox>
+                </layout:BlockLayoutCell>
+                </layout:BlockLayoutRow>
+
+                <layout:BlockLayoutRow id="_IDGenBlockLayoutRow6" >
+                <layout:BlockLayoutCell id="_IDGenBlockLayoutCell6" >
+                <Title id="_IDGenTitle5" text="Academic Profile"  ></Title>
+                    <List id="_IDGenList1" items="{/academicProfile}" >
+                    <StandardListItem id="_IDGenStandardListItem1" description="{description}" title="{School}" > </StandardListItem>
+                    </List>
+                </layout:BlockLayoutCell>
+                </layout:BlockLayoutRow>
+
+            </layout:BlockLayout>
+        </Page>
+    </App>
+</mvc:View>

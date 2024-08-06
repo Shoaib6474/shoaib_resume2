@@ -1,0 +1,32 @@
+{
+    "firstName": "Milton",
+    "lastName": "chandradas",
+    "city": "Atlanta",
+    "company": "SAP",
+    "address": {
+        "street": "8000 Avalon Bvid",
+        "city": "Alpharetta",
+        "zip":"30004",
+        "country":"US"
+    },
+    "hobbies":[{
+        "name": "tennis",
+        "skill": "professional",
+        "ranking": 1234,
+        "highestRanking": 12,
+        "status": "active",
+        "prizeMoney": 12500000,
+        "currencyCode": "USD"
+    },{
+        "name": "soccer",
+        "skill": "professional",
+        "prizeMoney": 2500000,
+        "ranking": 5478,
+        "status": "retired",
+        "highestRanking": 36,
+        "currencyCode": "USD"
+    },{
+        "name": "chess",
+        "skill": "amature"
+    }]
+}

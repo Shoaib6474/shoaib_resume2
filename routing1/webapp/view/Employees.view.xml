@@ -1,0 +1,7 @@
+<mvc:View controllerName="com.sap.routing1.controller.Employees"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+ <Page id="_IDGenPage1" title="Employees" class="sapUiResponsiveContentPadding" >
+ <content></content>
+ </Page>
+</mvc:View>

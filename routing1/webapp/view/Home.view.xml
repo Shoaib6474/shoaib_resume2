@@ -1,0 +1,9 @@
+<mvc:View controllerName="com.sap.routing1.controller.Home" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+
+    <Page id="_IDGenPage1" title="Home" class="sapUiResponsiveContentPadding"/>
+<TileContent id="_IDGenTileContent1" >
+    <Button id="_IDGenButton1" text="Diplay Invalid Target" press=".onDisplayInvaildTarget" class="sapUiTinyMarginEnd" ></Button>
+    <Button id="_IDGenButton2" text="Navigate to valid route" press=".onNavToValidRoute" class="sapUiTinyMarginEnd" ></Button>
+    </TileContent>
+
+</mvc:View>
