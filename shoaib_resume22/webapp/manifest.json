@@ -78,20 +78,34 @@
       },
       "routes": [
         {
-          "name": "RouteView1",
+          "name": "RouteHome",
           "pattern": ":?query:",
           "target": [
-            "TargetView1"
+            "Home"
           ]
-        }
+        },
+          {
+            "name":"Resume",
+            "pattern": "Resume",
+            "target":"Resume"
+          }
       ],
       "targets": {
-        "TargetView1": {
+        "Home": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "View1",
-          "viewName": "View1"
+          "viewId": "Home",
+          "viewName": "Home",
+          "viewLevel":1
+        },
+          "Resume":{
+            "viewType":"XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "Resume",
+            "viewName": "Resume",
+            "viewLevel":2
         }
       }
     },
